@@ -1,0 +1,5 @@
+package com.dada.model;
+
+public class Department {
+
+}

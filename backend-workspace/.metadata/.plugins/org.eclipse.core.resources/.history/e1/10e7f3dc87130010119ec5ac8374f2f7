@@ -1,0 +1,5 @@
+package com.dada.exception;
+
+public class ResourceNotFoundException {
+
+}

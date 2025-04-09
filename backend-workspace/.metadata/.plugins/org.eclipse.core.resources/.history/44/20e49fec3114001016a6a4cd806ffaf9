@@ -1,0 +1,11 @@
+package com.dada.model;
+
+import java.util.Date;
+
+public class Employee 
+{
+	private long id;
+	private String name;
+	private Date doj;
+	private Department dept;
+}

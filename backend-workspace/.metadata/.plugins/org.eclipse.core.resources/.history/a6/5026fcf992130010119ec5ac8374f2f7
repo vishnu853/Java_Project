@@ -1,0 +1,20 @@
+package com.dada.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Department 
+{
+	private long deptId;
+	private String deptName;
+	private String designation;
+	
+}

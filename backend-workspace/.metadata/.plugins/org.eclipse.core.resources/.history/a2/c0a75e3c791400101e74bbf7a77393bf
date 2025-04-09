@@ -1,0 +1,33 @@
+package com.dada.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.dada.exception.ResourceNotFoundException;
+import com.dada.model.Employee;
+import com.dada.repo.EmployeeRepository;
+
+@Service
+public class EmployeeService 
+{
+	@Autowired
+	EmployeeRepository employeeRepository;
+	
+	public Employee createEmployee(Employee employee)
+	{
+		return employeeRepository.save(employee);
+	}
+	
+	public List<Employee> getEmployees()
+	{
+		return employeeRepository.findAll();
+	}
+	
+	public Employee getEmployeeById(@PathVariable long id)
+	{
+		return employeeRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Id Not FOund"));
+	}
+}

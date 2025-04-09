@@ -1,0 +1,5 @@
+package com.dada.repo;
+
+public interface DepartmentRepository {
+
+}
